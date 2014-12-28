@@ -14,6 +14,11 @@
 		101DD6D51A052EDE00161F0D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 101DD6D31A052EDE00161F0D /* LaunchScreen.xib */; };
 		101DD6E11A052EDE00161F0D /* BlueLibrarySwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101DD6E01A052EDE00161F0D /* BlueLibrarySwiftTests.swift */; };
 		101DD6EC1A052F0E00161F0D /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 101DD6EB1A052F0E00161F0D /* HTTPClient.swift */; };
+		84372E001A4AA3F500F67EAC /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84372DFF1A4AA3F500F67EAC /* Album.swift */; };
+		84372E021A4AA42D00F67EAC /* AlbumView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84372E011A4AA42D00F67EAC /* AlbumView.swift */; };
+		84372E071A4AB46400F67EAC /* LibraryAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84372E061A4AB46400F67EAC /* LibraryAPI.swift */; };
+		84372E091A4AC6C200F67EAC /* PersistencyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84372E081A4AC6C200F67EAC /* PersistencyManager.swift */; };
+		84EF0B491A4FFB1400502551 /* AlubumExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84EF0B481A4FFB1400502551 /* AlubumExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +43,11 @@
 		101DD6DF1A052EDE00161F0D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		101DD6E01A052EDE00161F0D /* BlueLibrarySwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueLibrarySwiftTests.swift; sourceTree = "<group>"; };
 		101DD6EB1A052F0E00161F0D /* HTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		84372DFF1A4AA3F500F67EAC /* Album.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		84372E011A4AA42D00F67EAC /* AlbumView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlbumView.swift; sourceTree = "<group>"; };
+		84372E061A4AB46400F67EAC /* LibraryAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryAPI.swift; sourceTree = "<group>"; };
+		84372E081A4AC6C200F67EAC /* PersistencyManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersistencyManager.swift; sourceTree = "<group>"; };
+		84EF0B481A4FFB1400502551 /* AlubumExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlubumExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +89,9 @@
 		101DD6C71A052EDE00161F0D /* BlueLibrarySwift */ = {
 			isa = PBXGroup;
 			children = (
+				84372E051A4AB1B100F67EAC /* Controller */,
+				84372E041A4AB1AC00F67EAC /* View */,
+				84372E031A4AB1A000F67EAC /* Model */,
 				101DD6EA1A052EE400161F0D /* API */,
 				101DD6CA1A052EDE00161F0D /* AppDelegate.swift */,
 				101DD6CC1A052EDE00161F0D /* ViewController.swift */,
@@ -119,8 +132,34 @@
 			isa = PBXGroup;
 			children = (
 				101DD6EB1A052F0E00161F0D /* HTTPClient.swift */,
+				84372E061A4AB46400F67EAC /* LibraryAPI.swift */,
+				84372E081A4AC6C200F67EAC /* PersistencyManager.swift */,
 			);
 			name = API;
+			sourceTree = "<group>";
+		};
+		84372E031A4AB1A000F67EAC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				84372DFF1A4AA3F500F67EAC /* Album.swift */,
+				84EF0B481A4FFB1400502551 /* AlubumExtensions.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		84372E041A4AB1AC00F67EAC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				84372E011A4AA42D00F67EAC /* AlbumView.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		84372E051A4AB1B100F67EAC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,7 +207,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0610;
-				ORGANIZATIONNAME = Raywenderlich;
+				ORGANIZATIONNAME = "Dinh Van Nhat";
 				TargetAttributes = {
 					101DD6C41A052EDE00161F0D = {
 						CreatedOnToolsVersion = 6.1;
@@ -225,7 +264,12 @@
 			files = (
 				101DD6CD1A052EDE00161F0D /* ViewController.swift in Sources */,
 				101DD6CB1A052EDE00161F0D /* AppDelegate.swift in Sources */,
+				84372E071A4AB46400F67EAC /* LibraryAPI.swift in Sources */,
 				101DD6EC1A052F0E00161F0D /* HTTPClient.swift in Sources */,
+				84372E021A4AA42D00F67EAC /* AlbumView.swift in Sources */,
+				84372E001A4AA3F500F67EAC /* Album.swift in Sources */,
+				84372E091A4AC6C200F67EAC /* PersistencyManager.swift in Sources */,
+				84EF0B491A4FFB1400502551 /* AlubumExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -419,6 +463,7 @@
 				101DD6E61A052EDE00161F0D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		101DD6E71A052EDE00161F0D /* Build configuration list for PBXNativeTarget "BlueLibrarySwiftTests" */ = {
 			isa = XCConfigurationList;
@@ -427,6 +472,7 @@
 				101DD6E91A052EDE00161F0D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
