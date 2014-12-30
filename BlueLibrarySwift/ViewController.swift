@@ -47,9 +47,17 @@ class ViewController: UIViewController {
         
         self.showDataForAlbum(currentAlbumIndex)
         
+        loadPreviousState()
+        
         scroller.delegate = self
         reloadScroller()
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "saveCurrentState", name: UIApplicationDidEnterBackgroundNotification, object: nil)
 	}
+    
+    deinit {
+        NSNotificationCenter.defaultCenter().removeObserver(self)
+    }
 
     func showDataForAlbum(albumIndex: Int) {
         if (albumIndex < allAlbums.count && albumIndex > -1) {
@@ -75,6 +83,15 @@ class ViewController: UIViewController {
             currentAlbumIndex = allAlbums.count - 1
         }
         scroller.reload()
+        showDataForAlbum(currentAlbumIndex)
+    }
+    
+    func saveCurrentState() {
+        NSUserDefaults.standardUserDefaults().setInteger(currentAlbumIndex, forKey: "currentAlbumIndex")
+    }
+    
+    func loadPreviousState() {
+        currentAlbumIndex = NSUserDefaults.standardUserDefaults().integerForKey("currentAlbumIndex")
         showDataForAlbum(currentAlbumIndex)
     }
 }
