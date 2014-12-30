@@ -100,7 +100,6 @@
 				101DD6D11A052EDE00161F0D /* Images.xcassets */,
 				101DD6D31A052EDE00161F0D /* LaunchScreen.xib */,
 				101DD6C81A052EDE00161F0D /* Supporting Files */,
-				84655C6D1A511F5300A3CC0C /* HorizontalScroller.swift */,
 			);
 			path = BlueLibrarySwift;
 			sourceTree = "<group>";
@@ -152,6 +151,7 @@
 		84372E041A4AB1AC00F67EAC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				84655C6D1A511F5300A3CC0C /* HorizontalScroller.swift */,
 				84372E011A4AA42D00F67EAC /* AlbumView.swift */,
 			);
 			name = View;

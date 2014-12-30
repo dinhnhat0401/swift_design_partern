@@ -60,7 +60,7 @@ class HorizontalScroller: UIView {
             for index in 0..<delegate.numberOfViewsForHorizontalScroller(self) {
                 let view = scroller.subviews[index] as UIView
                 if CGRectContainsPoint(view.frame, location) {
-                    delegate.horizontalScrollerViewAtIndex(self, index: index)
+                    delegate.horizontalScrollerClickedViewAtIndex(self, index: index)
                     scroller.setContentOffset(CGPointMake(view.frame.origin.x - self.frame.size.width/2 + view.frame.size.width/2, 0), animated: true)
                     break
                 }
